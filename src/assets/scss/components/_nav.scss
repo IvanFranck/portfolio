@@ -1,0 +1,10 @@
+.nav {
+
+    &-link {
+
+        &:hover {
+            color: var(--color-red);
+            transition: $transition-default;
+        }
+    }
+}

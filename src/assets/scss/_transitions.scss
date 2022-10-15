@@ -1,0 +1,576 @@
+/* =========================================================================================
+    File Name: _transitions.scss
+    Description: Transition styles
+    ----------------------------------------------------------------------------------------
+    Item Name: SYSCAB
+========================================================================================== */
+
+/* ==========================================================================
+1. fade-fast
+========================================================================== */
+
+.fade-fast-enter-active,
+.fade-fast-leave-active {
+	transition: opacity 0.2s ease;
+}
+
+.fade-fast-enter-from,
+.fade-fast-leave-to {
+	opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fade-fast-enter-active,
+	.fade-fast-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+2. fade-slow
+========================================================================== */
+
+.fade-slow-enter-active,
+.fade-slow-leave-active {
+	transition: opacity 0.5s ease;
+}
+
+.fade-slow-enter-from,
+.fade-slow-leave-to {
+	opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.fade-slow-enter-active,
+	.fade-slow-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+3. translate-page-y
+========================================================================== */
+
+.translate-page-y-enter-active,
+.translate-page-y-leave-active{
+	// animation: translate-page-y-in 2.5s cubic-bezier(0.24, 0, 0.34, 1);
+	transition: all 0.5s ease;
+	
+}
+.translate-page-y-enter-from{
+	animation: translate-page-y-in 0.5s cubic-bezier(0.24, 0, 0.34, 1);
+} 
+.translate-page-y-leave-to {
+	animation: translate-page-y-out 0.5s cubic-bezier(0.24, 0, 0.34, 1) ;
+
+}
+
+@keyframes translate-page-y-out {
+	0% {
+		transform: translateX(0px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(100%);
+		opacity: 1;
+	}
+}
+@keyframes translate-page-y-in {
+	0% {
+		transform: translateY(0px);
+		opacity: 1;
+	}
+	100% {
+		transform: translateY(-100%);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-page-y-enter-active,
+	.translate-page-y-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.1 translate-page-x
+========================================================================== */
+
+.translate-page-x-enter-active {
+	animation: translate-page-x-in 0.5s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-page-x-leave-active {
+	animation: translate-page-x-out 0.5s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-page-x-in {
+	0% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-page-x-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-page-x-enter-active,
+	.translate-page-x-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.2 translate-page-x-right
+========================================================================== */
+.translate-page-x-right-enter-active {
+	animation: translate-page-x-right-in 0.2s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-page-x-right-leave-active {
+	animation: translate-page-x-right-out 0.2s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-page-x-right-in {
+	0% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-page-x-right-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-500px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-page-x-right-enter-active,
+	.translate-page-x-right-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.3 translate-page-x-custom
+========================================================================== */
+
+.translate-page-x-custom-enter-active {
+	animation: translate-page-x-custom-in 0.2s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-page-x-custom-leave-active {
+	animation: translate-page-x-custom-out 0.2s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-page-x-custom-in {
+	0% {
+		transform: translateX(-200px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-page-x-custom-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-page-x-custom-enter-active,
+	.translate-page-x-custom-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.4 translate-subview-right
+========================================================================== */
+
+.translate-subview-right-enter-active {
+	animation: translate-subview-right-in 0.6s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-subview-right-leave-active {
+	animation: translate-subview-right-out 0.6s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-subview-right-in {
+	0% {
+		transform: translateX(300px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-subview-right-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-subview-right-enter-active,
+	.translate-subview-right-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.5 translate-subview-left
+========================================================================== */
+
+.translate-subview-left-enter-active {
+	animation: translate-subview-left-in 0.6s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-subview-left-leave-active {
+	animation: translate-subview-left-out 0.6s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-subview-left-in {
+	0% {
+		transform: translateX(-300px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-subview-left-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(200px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-subview-left-enter-active,
+	.translate-subview-left-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.6 translate-miniview-right
+========================================================================== */
+
+.translate-miniview-right-enter-active {
+	animation: translate-miniview-right-in 0.8s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-miniview-right-leave-active {
+	animation: translate-miniview-right-out 0.5s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-miniview-right-in {
+	0% {
+		transform: translateX(150px);
+		opacity: 0;
+	}
+	50% {
+		transform: translateX(125px);
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-miniview-right-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	50% {
+		transform: translateX(-125px);
+	}
+	100% {
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-miniview-right-enter-active,
+	.translate-miniview-right-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+4.7 translate-miniview-left
+========================================================================== */
+
+.translate-miniview-left-enter-active {
+	animation: translate-miniview-left-in 0.8s cubic-bezier(0.24, 0, 0.34, 1);
+}
+.translate-miniview-left-leave-active {
+	animation: translate-miniview-left-out 0.5s cubic-bezier(0.24, 0, 0.34, 1);
+}
+
+@keyframes translate-miniview-left-in {
+	0% {
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes translate-miniview-left-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-150px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-miniview-left-enter-active,
+	.translate-miniview-left-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+5. list
+========================================================================== */
+
+.list-item {
+	display: inline-block;
+	margin-right: 10px;
+}
+.list-enter-active,
+.list-leave-active {
+	transition: all 0.4s ease;
+}
+.list-enter-from,
+.list-leave-to {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.list-enter-active,
+	.list-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+6. list-complete
+========================================================================== */
+
+.list-complete-item {
+	transition: all 0.8s ease;
+	display: inline-block;
+	margin-right: 10px;
+}
+
+.list-complete-enter-from,
+.list-complete-leave-to {
+	opacity: 0;
+	transform: translateY(30px);
+}
+
+.list-complete-leave-active {
+	position: absolute;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.list-complete-enter-active,
+	.list-complete-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+7. slide-x
+========================================================================== */
+
+.slide-x-enter-active {
+	transition: transform 0.3s ease-out;
+}
+
+.slide-x-leave-active {
+	transition: transform 0.2s ease-in;
+}
+
+.slide-x-enter-from {
+	transform: translateX(-100%);
+}
+.slide-x-enter-to {
+	transform: translateX(0);
+}
+
+.slide-x-leave-from {
+	transform: translateX(0);
+}
+.slide-x-leave-to {
+	transform: translateX(-100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.slide-x-enter-active,
+	.slide-x-leave-active {
+		transition: none;
+		transform: translateX(0);
+	}
+}
+
+/* ==========================================================================
+8. Submenu
+========================================================================== */
+
+.submenu-x-enter-active {
+	animation: submenu-x-in 0.8s cubic-bezier(0.3, 0, 0.5, 1);
+}
+.submenu-x-leave-active {
+	animation: submenu-x-out 0.8s cubic-bezier(0.3, 0, 0.5, 1);
+}
+
+@keyframes submenu-x-in {
+	0% {
+		transform: translateX(-400px);
+		opacity: 0;
+	}
+	100% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes submenu-x-out {
+	0% {
+		transform: translateX(0);
+		opacity: 1;
+	}
+	100% {
+		transform: translateX(-400px);
+		opacity: 0;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.submenu-x-enter-active,
+	.submenu-x-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+9. Zoom fade
+========================================================================== */
+.zoom-fade-enter-active,
+.zoom-fade-leave-active {
+	transition: transform 0.5s, opacity 0.6s ease-in-out;
+}
+
+.zoom-fade-enter-from {
+	position: absolute;
+	transform: scale(1.2);
+	opacity: 0;
+	z-index: 110;
+}
+
+.zoom-fade-leave-to {
+	position: absolute;
+	transform: scale(1);
+	opacity: 0;
+	z-index: 100;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.zoom-fade-enter-active,
+	.zoom-fade-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+9. Translate Y Slim
+========================================================================== */
+.translate-y-slim-enter-active,
+.translate-y-slim-leave-active {
+	transform: translateY(0);
+	transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+.translate-y-slim-enter-from {
+	transform: translateY(10px);
+	opacity: 0;
+}
+.translate-y-slim-leave-to {
+	transform: translateY(-10px);
+	opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-y-slim-enter-active,
+	.translate-y-slim-leave-active {
+		transition: none;
+	}
+}
+
+/* ==========================================================================
+9. Translate Y Slim plus
+========================================================================== */
+.translate-y-slim-plus-enter-active,
+.translate-y-slim-plus-leave-active {
+	transform: translateY(0);
+	transition: transform 0.25s ease-out, opacity 0.25s ease-out;
+}
+
+.translate-y-slim-plus-enter-from {
+	transform: translateY(10px);
+	opacity: 0;
+}
+.translate-y-slim-plus-leave-to {
+	transform: translateY(-30px);
+	opacity: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.translate-y-slim-plus-enter-active,
+	.translate-y-slim-plus-leave-active {
+		transition: none;
+	}
+}

@@ -1,0 +1,20 @@
+:root {
+	font-size: 16px;
+
+	--bg: #F4F4F8;
+
+	--color-dark-blue: #010f20;
+	--color-blue: #011936;
+	--color-light-blue: #4d5e72;
+	--color-lightest-blue: #99a3af;
+	
+	
+	--color-red: #C20114;
+
+
+	
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

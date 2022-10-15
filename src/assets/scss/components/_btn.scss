@@ -1,0 +1,60 @@
+.btn{
+    padding: 0.5rem 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-items: center;
+    font-family: "Roboto";
+    font-size: 1rem;
+	font-weight: 400;
+    cursor: pointer;
+	letter-spacing: 0.004rem;
+	line-height: 1.1875rem;
+
+    &-text{
+        color: var(--color-primary);
+        padding-bottom: 0.2rem;
+        text-decoration: underline;
+        text-underline-offset: 0.2rem;
+
+        &:hover{
+            color: var(--color-primary-300);
+            transform: scaleX(1.2);
+            transition: all linear 0.1s;
+        }
+    }
+
+    &-primary{
+        background-color: var(--color-primary);
+        border-radius: 0.5rem;
+        color: white;
+        
+        &:hover{
+            transform: scale(1.005);
+            transition: all linear 0.1s;
+            border-radius: 0.5rem;
+            background-color: var(--color-primary-500);
+        }
+    }
+    &-secondary{
+        background-color: var(--color-secondary);
+        color: #fff;
+        border-radius: 0.5rem;
+
+        &:hover{
+            background-color: var(--color-secondary-500);
+            transform: scale(1.03);
+            transition: all linear 0.1s;
+        }
+    }
+    &-black{
+        background-color: var(--color-black);
+        color: #fff;
+        border-radius: 0.5rem;
+
+        &:hover{
+            transform: scale(1.03);
+            transition: all linear 0.1s;
+        }
+    }
+}
