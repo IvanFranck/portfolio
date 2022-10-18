@@ -1,5 +1,5 @@
 <template>
-  <section role="about" class="about">
+  <section v-scroll-reveal role="aboutSection" class="about">
     <h1 class="text-primary heading">About me</h1>
     <div class="about_content w-full flex md:flex-row md:items-start md:space-x-8">
       <div class="image_wrapper md:mt-0">
@@ -35,7 +35,7 @@
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup></script>
 
 <style scoped lang="scss">
 @media (max-width: 768px) {
