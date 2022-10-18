@@ -11,9 +11,15 @@ body {
 
 
 .heading--xl {
-  font-size: clamp(40px, 8vw, 75px);
+  font-size: clamp(40px, 8vw, 70px);
   font-weight: 700;
   line-height: 1.1;
+}
+
+.heading {
+  font-size: clamp(26px, 5vw, var(--fz-heading));
+  font-weight: 700;
+  margin: 10px 0 40px;
 }
 
 .copy-1 {

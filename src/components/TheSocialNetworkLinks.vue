@@ -76,6 +76,11 @@
 <script setup></script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  #left {
+    display: none;
+  }
+}
 ul {
   margin: 0;
   padding: 0;

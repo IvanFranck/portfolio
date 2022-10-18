@@ -2,10 +2,11 @@
 
 <template>
   <TheNavBar />
-  <!-- <TheSocialNetworkLinks />
-  <TheMailInfo /> -->
+  <TheSocialNetworkLinks />
+  <TheMailInfo />
   <main class="min-h-screen">
     <TheHeroSection />
+    <TheAboutSection />
   </main>
 </template>
 

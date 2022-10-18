@@ -15,6 +15,11 @@
 <script></script>
 
 <style lang="scss" scoped>
+@media (max-width: 768px) {
+  #right {
+    display: none;
+  }
+}
 #right {
   p {
     writing-mode: vertical-rl;
