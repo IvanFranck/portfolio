@@ -1,6 +1,6 @@
 <template>
   <section v-scroll-reveal role="aboutSection" class="about">
-    <h1 class="text-primary heading">About me</h1>
+    <h2 class="text-primary heading">About me</h2>
     <div class="about_content w-full flex md:flex-row md:items-start md:space-x-8">
       <div class="image_wrapper md:mt-0">
         <img src="/src/assets/images/about-me-cover.JPG" alt="image of nzima" />
@@ -24,7 +24,7 @@
 
           <p>Sunt est non est duis ea velit elit minim occaecat.</p>
         </div>
-        <ul class="techno-list" role="list">
+        <ul class="techno-list font-roboto" role="list">
           <li>{{ "Javascript (ES6)" }}</li>
           <li>{{ "Vue JS" }}</li>
           <li>{{ "Node JS" }}</li>
@@ -38,6 +38,11 @@
 <script setup></script>
 
 <style scoped lang="scss">
+@media (max-width: 480px) {
+  li {
+    font-size: var(--fz-normal) !important;
+  }
+}
 @media (max-width: 768px) {
   .about_content {
     flex-direction: column-reverse;
@@ -58,6 +63,7 @@
 }
 
 .paragraph_container {
+  margin: 0;
   p {
     margin-bottom: 12px;
   }
@@ -65,7 +71,7 @@
 
 ul {
   display: grid;
-  grid-template-columns: repeat(2, minmax(140px, 200px));
+  grid-template-columns: repeat(2, minmax(140px, 300px));
   gap: 0px 10px;
   padding: 0px;
   margin: 20px 0px 0px;
@@ -73,6 +79,7 @@ ul {
   list-style: none;
 
   li {
+    font-size: var(--fz-md);
     position: relative;
     margin-bottom: 10px;
     padding-left: 20px;
@@ -82,7 +89,6 @@ ul {
       position: absolute;
       left: 0px;
       color: var(--color-red);
-      //   font-size: var(--fz-sm);
       line-height: 26px;
     }
   }

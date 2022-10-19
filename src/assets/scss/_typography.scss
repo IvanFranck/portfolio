@@ -16,6 +16,12 @@ body {
   line-height: 1.1;
 }
 
+.heading--lg {
+  font-weight: 500;
+  font-size: var(--fz-xl);
+  margin: 8px 0px 8px;
+}
+
 .heading {
   font-size: clamp(26px, 5vw, var(--fz-heading));
   font-weight: 700;
@@ -26,4 +32,14 @@ body {
   font-size: var(--fz-xl);
   font-weight: 400;
   // line-height: 1.1;
+}
+
+.note {
+  font-size: var(--fz-xs);
+  font-family: $font-family-monospace;
+}
+
+.link-2 {
+  font-size: var(--fz-normal);
+  font-family: $font-family-monospace;
 }

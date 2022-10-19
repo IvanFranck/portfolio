@@ -24,6 +24,7 @@
   p {
     writing-mode: vertical-rl;
     cursor: pointer;
+    font-size: var(--fz-xs);
 
     a {
       transition: var(--transition-default);

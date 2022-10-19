@@ -7,6 +7,7 @@
   <main class="min-h-screen">
     <TheHeroSection />
     <TheAboutSection />
+    <TheExperienceSection />
   </main>
 </template>
 

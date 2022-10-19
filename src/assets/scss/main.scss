@@ -10,6 +10,7 @@
 
 @import "variables";
 @import "typography";
+@import "mixin";
 @import "components";
 @import "transitions";
 
@@ -21,11 +22,16 @@
   --padding-xs: 0px 25px;
   --fz-xs: 13px;
   --fz-normal: 14px;
+  --fz-md: 16px;
   --fz-lg: 18px;
   --fz-xl: 20px;
+  --fz-xxl: 24px;
   --fz-heading: 36px;
   --image-shadow: 0px 15.8196px 4.5321px -6.84091px rgba(33, 37, 41, 0.05), 0px 32.6653px 25.5679px -6.84091px rgba(33, 37, 41, 0.11), 0px 37.625px 68.4091px -6.84091px rgba(33, 37, 41, 0.18);
   --border-radius: 50px;
+
+  --tab-width: 165px;
+  --tab-height: 42px;
 }
 
 body {

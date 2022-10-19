@@ -111,7 +111,7 @@ ul {
   content: "";
   display: block;
   width: 0.1rem;
-  height: 13.5rem;
+  height: 10.5rem;
   margin: 0px auto;
   background-color: var(--color-lightest-blue);
 }
