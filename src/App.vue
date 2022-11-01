@@ -8,6 +8,7 @@
     <TheHeroSection />
     <TheAboutSection />
     <TheExperienceSection />
+    <TheWorkSection />
   </main>
 </template>
 

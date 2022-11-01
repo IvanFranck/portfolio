@@ -34,9 +34,22 @@ body {
   // line-height: 1.1;
 }
 
+.copy-2 {
+  font-size: var(--fz-md);
+  font-weight: 400;
+  // line-height: 1.1;
+}
+
+.copy-1 {
+  font-size: var(--fz-xl);
+  font-weight: 400;
+  // line-height: 1.1;
+}
+
 .note {
   font-size: var(--fz-xs);
   font-family: $font-family-monospace;
+  font-weight: 400;
 }
 
 .link-2 {

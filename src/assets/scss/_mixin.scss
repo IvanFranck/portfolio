@@ -15,3 +15,20 @@
         outline: 0;
     }
 }
+
+@mixin link-primary {
+    display: inline-block;
+    text-decoration: none;
+    text-decoration-skip-ink: auto;
+    color: inherit;
+    position: relative;
+    transition: var(--transition-default);
+    cursor: pointer;
+
+    &:hover,
+    &:active,
+    &:focus {
+        transform: translateY(-3px);
+        outline: 0;
+    }
+}

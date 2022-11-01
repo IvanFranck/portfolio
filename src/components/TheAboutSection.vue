@@ -1,6 +1,6 @@
 <template>
   <section v-scroll-reveal role="aboutSection" class="about">
-    <h2 class="text-primary heading">About me</h2>
+    <h2 class="text-primary heading">About Me</h2>
     <div class="about_content w-full flex md:flex-row md:items-start md:space-x-8">
       <div class="image_wrapper md:mt-0">
         <img src="/src/assets/images/about-me-cover.JPG" alt="image of nzima" />
