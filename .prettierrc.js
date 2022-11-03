@@ -10,7 +10,7 @@ module.exports = {
 	proseWrap: 'never',
 	quoteProps: 'as-needed',
 	semi: true,
-	singleQuote: false,
+	singleQuote: true,
 	tabWidth: 2,
 	trailingComma: 'es5',
 	useTabs: true,

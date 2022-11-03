@@ -47,7 +47,7 @@
   }
 
   &:nth-of-type(2n + 1) &-content {
-    grid-column: 5/-1;
+    grid-column: 6/-1;
     text-align: right;
   }
 
@@ -84,7 +84,9 @@
     .project-tech-list {
       list-style: none;
       li {
-        margin: 0 0 5px 20px;
+        &:not(:first-of-type) {
+          margin: 0 0 5px 20px;
+        }
 
         &::before {
           content: "#";
@@ -143,7 +145,7 @@
 
 @media (max-width: 1080px) {
   .project:nth-of-type(2n + 1) .project-content {
-    grid-column: 5/-1;
+    grid-column: 6/-1;
   }
 }
 </style>
