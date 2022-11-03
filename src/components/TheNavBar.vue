@@ -8,18 +8,18 @@
         <h1 class="logo-text">Nzima Ivan</h1>
       </div>
 
-      <div role="navigation" class="nav font-roboto">
+      <div role="navigation" class="font-roboto">
         <ul class="flex">
-          <li class="cursor-pointer nav-link">
-            <a class="mx-4 cursor-pointer">About</a>
+          <li class="cursor-pointer">
+            <a class="mx-4 cursor-pointer" href="/#about_section">About</a>
           </li>
-          <li class="cursor-pointer nav-link">
-            <a class="mx-4 cursor-pointer">Experience</a>
+          <li class="cursor-pointer">
+            <a class="mx-4 cursor-pointer" href="/#experience_section">Experience</a>
           </li>
-          <li class="cursor-pointer nav-link">
-            <a class="mx-4 cursor-pointer">Works</a>
+          <li class="cursor-pointer">
+            <a class="mx-4 cursor-pointer" href="/#work_section">Works</a>
           </li>
-          <li class="cursor-pointer nav-link">
+          <li class="cursor-pointer">
             <a class="mx-4 cursor-pointer">Contact</a>
           </li>
         </ul>
@@ -29,7 +29,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, watch, watchEffect } from "vue";
+import { ref, watch, watchEffect } from "vue";
 import useScrollDirection from "../composables/useScrollDirection";
 
 const scrollDirection = ref(useScrollDirection("down"));
@@ -68,17 +68,46 @@ watch([scrollDirection, scrolledToTop], () => {
 });
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+@import "/src/assets/scss/_mixin.scss";
+
+@mixin scrolled-nav-link {
+  &:hover,
+  &:active,
+  &:focus {
+    color: var(--color-light-red) !important;
+    outline: 0;
+  }
+}
+
 #scrollUp {
   transform: translateY(0px);
   background-color: var(--color-blue);
   box-shadow: 0 10px 30px -10px var(--blue-shadow);
   color: var(--bg);
+
+  ul {
+    li {
+      @include scrolled-nav-link;
+    }
+  }
 }
 
 #scrollDown {
   transform: translateY(-100px);
   box-shadow: 0 20px 30px -10px var(--blue-shadow);
+  ul {
+    li {
+      @include scrolled-nav-link;
+    }
+  }
+}
+
+ul {
+  li {
+    @include link;
+    font-size: var(--fz-md);
+  }
 }
 
 header > div {

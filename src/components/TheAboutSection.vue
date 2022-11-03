@@ -1,5 +1,5 @@
 <template>
-  <section v-scroll-reveal role="aboutSection" class="about">
+  <section v-scroll-reveal role="aboutSection" class="about" id="about_section">
     <h2 class="text-primary heading">About Me</h2>
     <div class="about_content w-full flex md:flex-row md:items-start md:space-x-8">
       <div class="image_wrapper md:mt-0">

@@ -1,5 +1,5 @@
 <template>
-  <section v-scroll-reveal role="works section">
+  <section v-scroll-reveal role="works section" id="work_section">
     <h2 class="text-primary heading">Some Projects I Worked On</h2>
     <div class="project-container">
       <AppWork class="work" />

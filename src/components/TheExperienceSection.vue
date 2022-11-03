@@ -1,5 +1,10 @@
 <template>
-  <section v-scroll-reveal role="experience section" class="experience">
+  <section
+    v-scroll-reveal
+    role="experience section"
+    id="experience_section"
+    class="experience"
+  >
     <h2 class="text-primary heading">Where I've Worked</h2>
     <ul role="tablist" class="tabList flex flex-row relative">
       <li role="tablink" class="link-2 isActive">

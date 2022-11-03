@@ -3,6 +3,7 @@
     v-scroll-reveal
     role="hero"
     class="flex flex-col min-h-screen justify-center items-start p-0"
+    id="hero_section"
   >
     <h1 class="font-roboto ml-1 mb-5 font-normal text-secondary">Hello, my name is</h1>
     <div>
