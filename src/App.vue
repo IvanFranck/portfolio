@@ -1,16 +1,38 @@
-<script setup lang="ts"></script>
-
 <template>
   <TheNavBar />
   <TheSocialNetworkLinks />
   <TheMailInfo />
-  <main class="min-h-screen">
+  <main @click.stop="handleClickWhenMobileNavIsOpen" class="min-h-screen">
     <TheHeroSection />
     <TheAboutSection />
     <TheExperienceSection />
     <TheWorkSection />
   </main>
 </template>
+
+<script setup lang="ts">
+import { provide, ref } from "vue";
+
+const hamCliked = ref<boolean>(false);
+
+const handleClickWhenMobileNavIsOpen = () => {
+  if (document.body.classList.contains("blur-bg")) {
+    document.body.classList.remove("blur-bg");
+    hamCliked.value = !hamCliked.value;
+  }
+};
+
+const handleHamClick = () => {
+  hamCliked.value = !hamCliked.value;
+  if (document.body.classList.contains("blur-bg"))
+    document.body.classList.remove("blur-bg");
+  else document.body.classList.add("blur-bg");
+};
+
+provide("hamCliked", hamCliked);
+provide("handleHamClick", handleHamClick);
+provide("handleClickWhenMobileNavIsOpen", handleClickWhenMobileNavIsOpen);
+</script>
 
 <style lang="scss" scoped>
 main {

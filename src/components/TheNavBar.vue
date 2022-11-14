@@ -37,16 +37,16 @@
         </button>
         <aside class="aside-menu flex flex-col justify-center items-center">
           <ol class="w-full flex flex-col items-center py-20">
-            <li>
+            <li @click="handleClickWhenMobileNavIsOpen">
               <a class="mx-4 cursor-pointer" href="/#about_section">About</a>
             </li>
-            <li>
+            <li @click="handleClickWhenMobileNavIsOpen">
               <a class="mx-4 cursor-pointer" href="/#experience_section">Experience</a>
             </li>
-            <li>
+            <li @click="handleClickWhenMobileNavIsOpen">
               <a class="mx-4 cursor-pointer" href="/#work_section">Works</a>
             </li>
-            <li>
+            <li @click="handleClickWhenMobileNavIsOpen">
               <a class="mx-4 cursor-pointer">Contact</a>
             </li>
           </ol>
@@ -57,24 +57,20 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch, watchEffect } from "vue";
+import { inject, ref, watch, watchEffect } from "vue";
 import useScrollDirection from "../composables/useScrollDirection";
 
 const scrollDirection = ref(useScrollDirection("down"));
 const style = ref();
 const scrolledToTop = ref<boolean>(true);
-const hamCliked = ref<boolean>(false);
+const hamCliked = ref<boolean>(inject("hamCliked"));
 
 const handleScroll = () => {
   scrolledToTop.value = window.pageYOffset < 50;
 };
 
-const handleHamClick = () => {
-  hamCliked.value = !hamCliked.value;
-  if (document.body.classList.contains("blur-bg"))
-    document.body.classList.remove("blur-bg");
-  else document.body.classList.add("blur-bg");
-};
+const handleHamClick = inject("handleHamClick");
+const handleClickWhenMobileNavIsOpen = inject("handleClickWhenMobileNavIsOpen");
 
 watchEffect(() => {
   console.log("scrolledToTop.value: ", scrolledToTop.value);
