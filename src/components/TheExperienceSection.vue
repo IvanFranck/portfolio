@@ -32,7 +32,6 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
 import Data from "@/data/jobs.json";
 
 const activeJob = ref<number>(0);
