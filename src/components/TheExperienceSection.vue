@@ -7,17 +7,36 @@
   >
     <h2 class="text-primary heading">Where I've Worked</h2>
     <ul role="tablist" class="tabList flex flex-row relative">
-      <li role="tablink" class="link-2 isActive">
-        <a href=""> Bigbang LDT </a>
+      <li
+        v-for="job in Data"
+        @click.stop="activeJob = job.id"
+        :key="job.id"
+        role="tablink"
+        :class="{ 'link-2': true, isActive: activeJob === job.id }"
+      >
+        {{ job.enterprise }}
       </li>
-      <li role="tablink" class="link-2"><a href=""> Itnovation </a></li>
       <div role="tab hightlight" class="tabHightlight"></div>
     </ul>
-    <AppJob />
+    <AppJob
+      v-for="job in Data"
+      :key="job.id"
+      :id="job.id"
+      :jobTitle="job.jobTitle"
+      :enterprise="job.enterprise"
+      :duration="job.duration"
+      :description="job.description"
+      :class="{ hidden: activeJob !== job.id }"
+    />
   </section>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "vue";
+import Data from "@/data/jobs.json";
+
+const activeJob = ref<number>(0);
+</script>
 
 <style lang="scss" scoped>
 @import "/src/assets/scss/_mixin.scss";
@@ -38,6 +57,7 @@ li {
   }
 }
 .isActive {
+  background-color: var(--color-lightest-red);
   color: var(--color-red);
 }
 
@@ -55,5 +75,7 @@ li {
   height: 2px;
   width: var(--tab-width);
   background-color: var(--color-red);
+  transform: translateX(calc(v-bind(activeJob) * var(--tab-width)));
+  transition: var(--transition-default);
 }
 </style>

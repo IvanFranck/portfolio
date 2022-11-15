@@ -2,35 +2,37 @@
   <div role="job container" class="job_container flex flex-col items-start">
     <div class="job_header">
       <h3 role="job title " class="heading--lg text-primary">
-        Front end Developper <span class="text-secondary">@Bigbang LDT</span>
+        {{ jobTitle }}
       </h3>
-      <h4 role="job period" class="note">Sept 2021 - Fev 2022</h4>
+      <h4 role="job period" class="note">{{ duration }}</h4>
     </div>
 
     <div role="job description" class="flex flex-col job_description">
       <ul>
-        <li>
-          Consectetur officia amet duis reprehenderit deserunt. Excepteur commodo minim in
-          laboris occaecat ex incididunt voluptate. Proident quis qui occaecat mollit
-          minim velit do consequat.
-        </li>
-
-        <li>
-          Voluptate aliquip sint incididunt quis dolore. Sunt laborum voluptate sint
-          officia consequat quis ad. Excepteur pariatur Lorem laborum sint sit cupidatat
-          cillum dolore. Commodo nisi dolor eu esse cillum ipsum nostrud laboris elit ea
-          quis ex ad. Proident ipsum et magna officia dolor fugiat.
-        </li>
+        <li v-for="(task, index) in description" :key="index">{{ task }}</li>
       </ul>
     </div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { defineProps } from "vue";
+
+interface PropsTypes {
+  id: number;
+  jobTitle: string;
+  enterprise: string;
+  duration: string;
+  description: string[];
+}
+defineProps<PropsTypes>();
+</script>
 
 <style scoped lang="scss">
 .job_container {
   max-width: 700px;
+  transition: var(--transition-default);
+
   .job_header {
     margin-bottom: 25px;
   }
