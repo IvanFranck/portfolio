@@ -16,8 +16,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineProps } from "vue";
-
 interface PropsTypes {
   id: number;
   jobTitle: string;

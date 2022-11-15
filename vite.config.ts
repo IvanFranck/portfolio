@@ -9,6 +9,7 @@ import Components from "unplugin-vue-components/vite"; // for components auto im
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  assetsInclude: "**/*.JPG",
   plugins: [vue(), Pages(), Components()],
   resolve: {
     alias: {

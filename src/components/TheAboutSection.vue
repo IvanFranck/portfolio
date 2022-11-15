@@ -3,7 +3,7 @@
     <h2 class="text-primary heading">About Me</h2>
     <div class="about_content w-full flex md:flex-row md:items-start md:space-x-8">
       <div class="image_wrapper md:mt-0">
-        <img src="/src/assets/images/about-me-cover.JPG" alt="image of nzima" />
+        <img id="hero-img" alt="image of nzima" />
       </div>
 
       <div class="description">
@@ -35,7 +35,14 @@
   </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { onMounted } from "vue";
+import imgUrl from "@/assets/images/about-me-cover.JPG";
+onMounted(() => {
+  const img = document.getElementById("hero-img");
+  img.src = imgUrl;
+});
+</script>
 
 <style scoped lang="scss">
 @media (max-width: 480px) {
