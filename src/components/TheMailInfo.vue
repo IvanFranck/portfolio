@@ -6,7 +6,7 @@
   >
     <div class="w-full flex justify-center items-center">
       <p class="text-primary-lightest font-roboto">
-        <a href=""> nzima.ivan.franck@gmail.com </a>
+        <a href="mailto:nzima.ivan.franck@gmail.com"> nzima.ivan.franck@gmail.com </a>
       </p>
     </div>
   </div>

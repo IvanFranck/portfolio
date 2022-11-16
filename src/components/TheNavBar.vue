@@ -20,7 +20,7 @@
             <a class="mx-4 cursor-pointer" href="/#work_section">Works</a>
           </li>
           <li>
-            <a class="mx-4 cursor-pointer">Contact</a>
+            <a class="mx-4 cursor-pointer" href="/#contact_section">Contact</a>
           </li>
         </ul>
       </div>
@@ -47,7 +47,7 @@
               <a class="mx-4 cursor-pointer" href="/#work_section">Works</a>
             </li>
             <li @click="handleClickWhenMobileNavIsOpen">
-              <a class="mx-4 cursor-pointer">Contact</a>
+              <a class="mx-4 cursor-pointer" href="/#contact_section">Contact</a>
             </li>
           </ol>
         </aside>
@@ -73,7 +73,6 @@ const handleHamClick = inject("handleHamClick");
 const handleClickWhenMobileNavIsOpen = inject("handleClickWhenMobileNavIsOpen");
 
 watchEffect(() => {
-  console.log("scrolledToTop.value: ", scrolledToTop.value);
   window.addEventListener("scroll", handleScroll);
 
   return () => {
@@ -82,9 +81,6 @@ watchEffect(() => {
 });
 
 watch([scrollDirection, scrolledToTop], () => {
-  // console.log("scrollDirection: ", scrollDirection);
-  // console.log("scroll to top: ", scrolledToTop.value);
-
   if (scrolledToTop.value) {
     style.value = " ";
   } else {

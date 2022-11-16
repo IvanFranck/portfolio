@@ -2,12 +2,16 @@
   <TheNavBar />
   <TheSocialNetworkLinks />
   <TheMailInfo />
-  <main @click.stop="handleClickWhenMobileNavIsOpen" class="min-h-screen">
-    <TheHeroSection />
-    <TheAboutSection />
-    <TheExperienceSection />
-    <TheWorkSection />
-  </main>
+  <div class="flex flex-col gap-y-12">
+    <main @click.stop="handleClickWhenMobileNavIsOpen" class="min-h-screen">
+      <TheHeroSection />
+      <TheAboutSection />
+      <TheExperienceSection />
+      <TheWorkSection />
+      <TheContactSection />
+    </main>
+    <TheFooter />
+  </div>
 </template>
 
 <script setup lang="ts">
@@ -55,5 +59,8 @@ main {
   main {
     padding: var(--padding-xs);
   }
+}
+
+.content {
 }
 </style>
