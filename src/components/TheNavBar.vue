@@ -8,7 +8,7 @@
         <h1 class="logo-text">Nzima Ivan</h1>
       </div>
 
-      <div role="navigation" class="font-roboto navigation-lg-screen">
+      <!-- <div role="navigation" class="font-roboto navigation-lg-screen">
         <ul class="flex">
           <li>
             <a class="mx-4 cursor-pointer" href="/#about_section">About</a>
@@ -23,10 +23,10 @@
             <a class="mx-4 cursor-pointer" href="/#contact_section">Contact</a>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- Mobile navigation -->
-      <div :class="{ 'navigation-sm-screen': true, 'aside-menu__active': hamCliked }">
+      <!-- <div :class="{ 'navigation-sm-screen': true, 'aside-menu__active': hamCliked }">
         <button
           @click="handleHamClick"
           :class="{ 'ham relative': !hamCliked, ham__active: hamCliked }"
@@ -51,7 +51,7 @@
             </li>
           </ol>
         </aside>
-      </div>
+      </div> -->
     </div>
   </header>
 </template>

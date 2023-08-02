@@ -5,12 +5,7 @@
   <div class="flex flex-col gap-y-12">
     <main @click.stop="handleClickWhenMobileNavIsOpen" class="min-h-screen">
       <TheHeroSection />
-      <TheAboutSection />
-      <TheExperienceSection />
-      <TheWorkSection />
-      <TheContactSection />
     </main>
-    <TheFooter />
   </div>
 </template>
 
@@ -61,6 +56,4 @@ main {
   }
 }
 
-.content {
-}
 </style>
