@@ -6,9 +6,10 @@
     id="hero_section"
   > 
     <div class="center_section">
-      <h1 class="font-roboto ml-1 mb-5 font-normal text-secondary text-right">Hello, my name is</h1>
+      <h1 class="font-roboto ml-1 mb-5 font-normal text-right">Hello, my name is</h1>
       <div>
-        <h2 class="text-primary heading--xl">Nzima Ivan.</h2>
+        <h2 class="text-primary heading--xl">NZIMA Ivan.</h2>
+        <h2 class="text-primary heading--xl">I'm a sofware engineer.</h2>
         <h3 class="text-primary-light heading--xl mt-3">
           I solve problems by building useful web and mobile apps.
         </h3>
@@ -43,6 +44,7 @@ p {
 }
 
 .contact-CTA {
+  display: inline-block;
   color: var(--bg);
   background-color: var(--color-red);
   border: 1px solid var(--color-red);
@@ -76,7 +78,7 @@ p {
   flex: 1;
   display: flex;
   flex-direction: column;
-  align-items: start;
+  align-items: flex-start;
   justify-content: center;
 }
 .footer-section {
