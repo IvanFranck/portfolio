@@ -7,7 +7,7 @@
     <ul class="flex flex-col w-full items-center">
      
       <li>
-        <a href="https://www.linkedin.com/in/nzima-ivan-%F0%9F%92%BB-d%C3%A9veloppeur-web-8a8067182/">
+        <a href="https://www.linkedin.com/in/nzima-ivan-8a8067182/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             role="img"
